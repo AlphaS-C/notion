@@ -2,18 +2,25 @@
 <head>
     <title>Greeting Message</title> 
     <style>
-#lbl {
-    font-family: monospace;
-    font-size: xx-large;
-    color: #e5e5e5;
-    padding: 1px;
-    border: 2px solid #e5e5e5;
-    text-align: center;
-    line-height: 1.5;
-    height:85%
 
-
+@font-face {
+	font-family: sanfrancisco;
+	src: url('System San Francisco Display Regular.ttf')
 }
+
+#lbl {
+    font-family: sanfrancisco;
+    font-size: xx-large;
+    font-weight: bold;
+    color: #e5e5e5;
+    padding: 10px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 1.0;
+    height:100%
+}
+
+
 #date{
     font-size:large;
 }
@@ -45,11 +52,11 @@ body{
     var greet;
 
     if (hrs < 12)
-        greet = 'Bon dia ';
+        greet = 'Bon dia';
     else if (hrs >= 12 && hrs <= 17)
-        greet = 'Bona tarda ';
+        greet = 'Bona tarda';
     else if (hrs >= 17 && hrs <= 24)
-        greet = 'Bona nit  ';
+        greet = 'Bona nit';
 
     document.getElementById('lbl').innerHTML =
         greet+=`<div id="date"> Es ${date}</div>`;
